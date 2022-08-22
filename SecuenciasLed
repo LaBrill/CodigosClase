@@ -133,6 +133,7 @@ while True:
     derecha()
     izquierda()
 
+
 #MetodoCuatro
 
 from machine import Pin as pin
@@ -163,8 +164,7 @@ while True:
     izquierda()
 
 
-#Metodocinco
-
+#MetodoCinco
 
 from machine import Pin as pin
 from utime import sleep as pausa, sleep_ms as pausam, sleep_us as pausau
