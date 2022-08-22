@@ -1,3 +1,5 @@
+#MetodoUno
+
 from machine import Pin as pin
 from utime import sleep, sleep_ms
 led1=pin(2,pin.OUT)
