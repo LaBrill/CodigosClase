@@ -55,6 +55,7 @@ while True:
     led10.value(0)
     sleep(pausa)
 
+
 #MetodoDos
 
 from machine import Pin as pin
@@ -96,3 +97,5 @@ while True:
     print_led(0,1,0,1,0,1,0,1,0)
     print_led(1,0,1,0,1,0,1,0,1)
    
+
+#MetodoTres
