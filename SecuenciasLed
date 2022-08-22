@@ -54,3 +54,5 @@ while True:
     sleep(pausa)
     led10.value(0)
     sleep(pausa)
+
+#MetodoDos
