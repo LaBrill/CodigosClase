@@ -161,3 +161,28 @@ def izquierda():
 while True:
     derecha()
     izquierda()
+
+
+#Metodocinco
+
+
+from machine import Pin as pin
+from utime import sleep as pausa, sleep_ms as pausam, sleep_us as pausau
+puerto=[15,2,4,17,5,18,19,21,22,23]
+toditicos=[]
+for i in puerto:
+  toditicos.append (pin(i,pin.OUT))
+print (toditicos)
+def derecha():
+    for i in toditicos:
+        for j in range (1000):
+          i.value(not i.value())
+        pausam(100)
+def izquierda():
+    for i in reversed (toditicos):
+        for j in range (1000):
+          i.value(not i.value())
+        pausam(100)
+while True:
+    derecha()
+    izquierda()
