@@ -1,0 +1,44 @@
+from machine import Pin
+import utime
+boton1 = Pin(25,Pin.IN)
+boton2 = Pin(26,Pin.IN)
+boton3 = Pin(27,Pin.IN)
+boton4 = Pin(13,Pin.IN)
+leda=pin(15,pin.OUT)
+ledb=pin(2,pin.OUT)
+ledc=pin(4,pin.OUT)
+ledd=pin(17,pin.OUT)
+lede=pin(5,pin.OUT)
+ledf=pin(18,pin.OUT)
+ledg=pin(19,pin.OUT)
+ledh=pin(21,pin.OUT)
+ledi=pin(22,pin.OUT)
+ledj=pin(23,pin.OUT)
+
+while (True):
+    utime.sleep(0.1)
+    if (boton1.value()==0):
+        print ("verde presionado")
+    else :
+        print ("no presionado")
+        
+    utime.sleep(0.1)
+    if (boton2.value()==0):
+        print ("azul presionado")
+    else :
+        print ("no presionado")
+        
+    utime.sleep(0.1)
+    if (boton3.value()==0):
+        print ("rojo presionado")
+    else :
+        print ("no presionado")
+        
+    utime.sleep(0.1)
+    if (boton4.value()==0):
+        print ("amarillo presionado")
+    else :
+        print ("no presionado")
+        
+    if (boton1.value()==0):
+        
