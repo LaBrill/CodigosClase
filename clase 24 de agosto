@@ -45,3 +45,40 @@ while (True):
         utime.sleep(0.5)
         leda.value(0)
         
+        ledb.value(1)
+        utime.sleep(0.5)
+        ledb.value(0)
+        
+        ledc.value(1)
+        utime.sleep(0.5)
+        ledc.value(0)
+        
+        ledd.value(1)
+        utime.sleep(0.5)
+        ledd.value(0)
+        
+        lede.value(1)
+        utime.sleep(0.5)
+        lede.value(0)
+        
+        ledf.value(1)
+        utime.sleep(0.5)
+        ledf.value(0)
+        
+        ledg.value(1)
+        utime.sleep(0.5)
+        ledg.value(0)
+        
+        ledh.value(1)
+        utime.sleep(0.5)
+        ledh.value(0)
+        
+        ledi.value(1)
+        utime.sleep(0.5)
+        ledi.value(0)
+        
+        ledj.value(1)
+        utime.sleep(0.5)
+        ledj.value(0)
+        
+        
