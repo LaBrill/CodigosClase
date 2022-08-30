@@ -234,6 +234,60 @@ while (True):
         utime.sleep(0.5)
         lede.value(0) , ledf.value(0)
         
+        
+        // dos botones al tiempo (verde y rojo) 
+        
+        if (boton3.value()==0+boton1.value()==0):
+        print ("verde y rojo presionado")
+    
+        if (boton3.value()==0+boton1.value()==0):
+         
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        
+        
+       // dos botones al tiempo (azul y amarillo)
+       if (boton4.value()==0+boton2.value()==0):
+       print ("azul y amarillo presionado")
+    
+       if (boton4.value()==0+boton2.value()==0):
+        
+        print_led(1,1,0,0,0,0,0,0,0,0)
+        print_led(1,0,1,0,0,0,0,0,0,0)
+        print_led(1,0,0,1,0,0,0,0,0,0)
+        print_led(1,0,0,0,1,0,0,0,0,0)
+        print_led(1,0,0,0,0,1,0,0,0,0)
+        print_led(1,0,0,0,0,0,1,0,0,0)
+        print_led(1,0,0,0,0,0,0,1,0,0)
+        print_led(1,0,0,0,0,0,0,0,1,0)
+        print_led(1,0,0,0,0,0,0,0,0,1)
+        print_led(0,0,0,0,0,0,0,0,1,1)
+        print_led(0,0,0,0,0,0,0,1,0,1)
+        print_led(0,0,0,0,0,0,1,0,0,1)
+        print_led(0,0,0,0,0,1,0,0,0,1)
+        print_led(0,0,0,0,1,0,0,0,0,1)
+        print_led(0,0,0,1,0,0,0,0,0,1)
+        print_led(0,0,1,0,0,0,0,0,0,1)
+        print_led(0,1,0,0,0,0,0,0,0,1)
+        print_led(1,0,0,0,0,0,0,0,0,1)
+        
+    
+
+        
     
 
         
