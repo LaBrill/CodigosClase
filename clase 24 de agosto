@@ -1,4 +1,4 @@
-//Secuencia verde 0 1 
+//secuencia boton verde
 
 from machine import Pin
 import utime
@@ -190,7 +190,7 @@ while (True):
         leda.value(0)
         
         
-        // dos botones al tiempo (verde y amarillo)
+    // dos botones al tiempo (verde y amarillo)
         
     if (boton4.value()==0+boton1.value()==0):
         print ("verde y amarillo presionado")
