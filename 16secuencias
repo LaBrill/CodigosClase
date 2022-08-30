@@ -29,6 +29,31 @@ def print_led(a,b,c,d,e,f,g,h,i,j):
     utime.sleep(0.5)
     
 while (True):
+
+    print_led(0,0,0,0,1,1,0,0,0,0)
+    print_led(0,0,0,1,1,1,1,0,0,0)
+    print_led(0,0,1,1,1,1,1,1,0,0)
+    print_led(0,1,1,1,0,0,1,1,1,0)
+    print_led(1,1,0,0,0,0,0,0,1,1)
+    print_led(1,0,0,0,0,0,0,0,0,1)
+    print_led(1,1,0,0,0,0,0,0,1,1)
+    print_led(1,1,1,0,0,0,0,1,1,1)
+    print_led(0,1,1,1,0,0,1,1,1,0)
+    print_led(0,0,1,1,1,1,1,1,0,0)
+    print_led(0,0,0,1,1,1,1,0,0,0)
+    print_led(0,0,0,0,1,1,0,0,0,0)
+    print_led(0,0,0,0,1,1,0,0,0,0)
+    print_led(0,0,0,1,1,1,1,0,0,0)
+    print_led(0,0,1,1,1,1,1,1,0,0)
+    print_led(0,1,1,1,0,0,1,1,1,0)
+    print_led(1,1,0,0,0,0,0,0,1,1)
+    print_led(1,0,0,0,0,0,0,0,0,1)
+    print_led(1,1,0,0,0,0,0,0,1,1)
+    print_led(1,1,1,0,0,0,0,1,1,1)
+    print_led(0,1,1,1,0,0,1,1,1,0)
+    print_led(0,0,1,1,1,1,1,1,0,0)
+    print_led(0,0,0,1,1,1,1,0,0,0)
+    print_led(0,0,0,0,1,1,0,0,0,0)
     
     utime.sleep(0.1)
     if (boton1.value()==0):
@@ -323,3 +348,49 @@ while (True):
         print_led(0,0,0,0,0,0,0,0,0,1)
         print_led(0,0,0,0,0,0,0,0,0,0)
             
+   if (boton4.value()==0+boton2.value()==0):
+        print ("Amarillo y Azul presionado")
+    
+   if (boton4.value()==0+boton2.value()==0):
+   
+        ledd.value(1) , lede.value(1) , ledf.value(1) , ledg.value(1)
+        utime.sleep(0.15)
+        ledd.value(0) , lede.value(0) , ledf.value(0) , ledg.value(0)
+
+        utime.sleep(0.15)
+
+        ledd.value(1) , lede.value(1) , ledf.value(1) , ledg.value(1)
+        utime.sleep(0.15)
+        ledd.value(0) , lede.value(0) , ledf.value(0) , ledg.value(0)
+
+        utime.sleep(0.15)
+
+        ledd.value(1) , lede.value(1) , ledf.value(1) , ledg.value(1)
+        utime.sleep(0.15)
+        ledd.value(0) , lede.value(0) , ledf.value(0) , ledg.value(0)
+
+        utime.sleep(0.15)
+
+        leda.value(1) , ledb.value(1) , ledc.value(1) , ledh.value(1), ledi.value(1) , ledj.value(1)
+        utime.sleep(0.15)
+        leda.value(0) , ledb.value(0) , ledc.value(0) , ledh.value(0), ledi.value(0) , ledj.value(0)
+        
+        utime.sleep(0.15)
+
+        leda.value(1) , ledb.value(1) , ledc.value(1) , ledh.value(1), ledi.value(1) , ledj.value(1)
+        utime.sleep(0.15)
+        leda.value(0) , ledb.value(0) , ledc.value(0) , ledh.value(0), ledi.value(0) , ledj.value(0)
+        
+        utime.sleep(0.15)
+        
+        leda.value(1) , ledb.value(1) , ledc.value(1) , ledh.value(1), ledi.value(1) , ledj.value(1)
+        utime.sleep(0.15)
+        leda.value(0) , ledb.value(0) , ledc.value(0) , ledh.value(0), ledi.value(0) , ledj.value(0)
+      
+   if (boton4.value()==0+boton2.value()==0):
+        print ("Amarillo y verde presionado")
+    
+   if (boton4.value()==0+boton2.value()==0): 
+   
+   
+    
