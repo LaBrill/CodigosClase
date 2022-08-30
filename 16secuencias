@@ -54,7 +54,10 @@ while (True):
     else :
         print ("no presionado")
         
-    if (boton1.value()==0):
+    if (boton3.value()==0):
+    
+        print ("Rojo presionado")
+        
         leda.value(1)
         utime.sleep(0.5)
         leda.value(0)
@@ -94,14 +97,12 @@ while (True):
         ledj.value(1)
         utime.sleep(0.5)
         ledj.value(0)
- 
- 
 
     utime.sleep(0.1)
-    if (boton1.value()==0+boton2.value()==0):
-        print ("verde y azul presionado")
+    if (boton4.value()==0):
     
-    if (boton1.value()==0+boton2.value()==0):
+        print ("Amarillo presionado")
+    
         leda.value(1)
         utime.sleep(0.5)
         leda.value(0)
@@ -178,10 +179,10 @@ while (True):
         utime.sleep(0.5)
         leda.value(0)
         
-    if (boton4.value()==0+boton1.value()==0):
-        print ("verde y amarillo presionado")
+    if (boton2.value()==0):
+        print ("Azul presionado")
     
-    if (boton4.value()==0+boton1.value()==0):
+    if (boton2.value()==0):
         
         lede.value(1) , ledf.value(1)
         utime.sleep(0.5)
@@ -221,10 +222,10 @@ while (True):
         lede.value(0) , ledf.value(0)
         
         
-    if (boton3.value()==0+boton1.value()==0):
-        print ("verde y rojo presionado")
+    if (boton1.value()==0):
+        print ("verde presionado")
     
-    if (boton3.value()==0+boton1.value()==0):
+    if (boton1.value()==0+):
          
         print_led(1,0,1,0,1,0,1,0,1,0)
         print_led(0,1,0,1,0,1,0,1,0,1)
@@ -244,10 +245,10 @@ while (True):
         print_led(0,1,0,1,0,1,0,1,0,1)
         
         
-    if (boton4.value()==0+boton2.value()==0):
-        print ("azul y amarillo presionado")
+    if (boton3.value()==0+boton4.value()==0):
+        print ("Rojo y Amarillo presionado")
     
-    if (boton4.value()==0+boton2.value()==0):
+    if (boton3.value()==0+boton4.value()==0):
         
         print_led(1,1,0,0,0,0,0,0,0,0)
         print_led(1,0,1,0,0,0,0,0,0,0)
@@ -270,7 +271,7 @@ while (True):
         
         
     if (boton3.value()==0+boton2.value()==0):
-        print ("azul y rojo presionado")
+        print ("Rojo y Azul presionado")
     
     if (boton3.value()==0+boton2.value()==0):
         
@@ -296,10 +297,10 @@ while (True):
         print_led(1,1,0,0,0,0,0,0,0,1)
         print_led(1,0,0,0,0,0,0,0,0,1)
         
-    if (boton3.value()==0+boton4.value()==0):
-        print ("amarillo y rojo presionado")
+    if (boton3.value()==0+boton1.value()==0):
+        print ("Rojo y Verde presionado")
     
-    if (boton3.value()==0+boton4.value()==0):
+    if (boton3.value()==0+boton1.value()==0):
         
         print_led(1,0,0,0,0,0,0,0,0,0)
         print_led(1,1,0,0,0,0,0,0,0,0)
