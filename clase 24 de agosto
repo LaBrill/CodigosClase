@@ -1,3 +1,5 @@
+//Secuencia verde 0 1 
+
 from machine import Pin
 import utime
 boton1 = Pin(25,Pin.IN)
