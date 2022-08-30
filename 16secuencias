@@ -521,6 +521,9 @@ while (True):
         print_led(0,0,0,0,0,0,0,0,0,0)
         print_led(1,0,0,0,0,0,0,0,0,1)
         print_led(0,0,0,0,0,0,0,0,0,0)
+        
+        
+        
 
     else :
         print ("no presionados")
