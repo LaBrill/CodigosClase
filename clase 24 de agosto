@@ -86,7 +86,7 @@ while (True):
         
         
         
-   // dos botones al tiempo
+   // dos botones al tiempo (verde y azul)
         
         
         from machine import Pin
