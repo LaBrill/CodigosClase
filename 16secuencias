@@ -55,6 +55,34 @@ while (True):
     else :
         print ("no presionado")
         
+    
+    if(boton1.value()==boton2.value()==1+boton3.value()==1+boton4.value()==1):
+    
+                print_led(0,0,0,0,1,1,0,0,0,0)
+        print_led(0,0,0,1,1,1,1,0,0,0)
+        print_led(0,0,1,1,1,1,1,1,0,0)
+        print_led(0,1,1,1,0,0,1,1,1,0)
+        print_led(1,1,0,0,0,0,0,0,1,1)
+        print_led(1,0,0,0,0,0,0,0,0,1)
+        print_led(1,1,0,0,0,0,0,0,1,1)
+        print_led(1,1,1,0,0,0,0,1,1,1)
+        print_led(0,1,1,1,0,0,1,1,1,0)
+        print_led(0,0,1,1,1,1,1,1,0,0)
+        print_led(0,0,0,1,1,1,1,0,0,0)
+        print_led(0,0,0,0,1,1,0,0,0,0)
+        print_led(0,0,0,0,1,1,0,0,0,0)
+        print_led(0,0,0,1,1,1,1,0,0,0)
+        print_led(0,0,1,1,1,1,1,1,0,0)
+        print_led(0,1,1,1,0,0,1,1,1,0)
+        print_led(1,1,0,0,0,0,0,0,1,1)
+        print_led(1,0,0,0,0,0,0,0,0,1)
+        print_led(1,1,0,0,0,0,0,0,1,1)
+        print_led(1,1,1,0,0,0,0,1,1,1)
+        print_led(0,1,1,1,0,0,1,1,1,0)
+        print_led(0,0,1,1,1,1,1,1,0,0)
+        print_led(0,0,0,1,1,1,1,0,0,0)
+        print_led(0,0,0,0,1,1,0,0,0,0)
+        
     if (boton3.value()==0):
     
         print ("Rojo presionado")
