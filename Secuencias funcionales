@@ -1,0 +1,307 @@
+from machine import Pin
+import utime
+boton1 = Pin(25,Pin.IN)
+boton2 = Pin(26,Pin.IN)
+boton3 = Pin(27,Pin.IN)
+boton4 = Pin(13,Pin.IN)
+leda=Pin(15,Pin.OUT)
+ledb=Pin(2,Pin.OUT)
+ledc=Pin(4,Pin.OUT)
+ledd=Pin(17,Pin.OUT)
+lede=Pin(5,Pin.OUT)
+ledf=Pin(18,Pin.OUT)
+ledg=Pin(19,Pin.OUT)
+ledh=Pin(21,Pin.OUT)
+ledi=Pin(22,Pin.OUT)
+ledj=Pin(23,Pin.OUT)
+
+def print_led(a,b,c,d,e,f,g,h,i,j):
+    leda.value(a)
+    ledb.value(b)
+    ledc.value(c)
+    ledd.value(d)
+    lede.value(e)
+    ledf.value(f)
+    ledg.value(g)
+    ledh.value(h)
+    ledi.value(i)
+    ledj.value(j)
+    utime.sleep(0.1)
+while (True):
+    utime.sleep(0.2)
+    def secuencia1():
+        
+        print ("Rojo presionado")
+        
+        leda.value(1)
+        utime.sleep(0.2)
+        leda.value(0)
+        
+        ledb.value(1)
+        utime.sleep(0.2)
+        ledb.value(0)
+        
+        ledc.value(1)
+        utime.sleep(0.2)
+        ledc.value(0)
+        
+        ledd.value(1)
+        utime.sleep(0.2)
+        ledd.value(0)
+        
+        lede.value(1)
+        utime.sleep(0.2)
+        lede.value(0)
+        
+        ledf.value(1)
+        utime.sleep(0.2)
+        ledf.value(0)
+        
+        ledg.value(1)
+        utime.sleep(0.2)
+        ledg.value(0)
+        
+        ledh.value(1)
+        utime.sleep(0.2)
+        ledh.value(0)
+        
+        ledi.value(1)
+        utime.sleep(0.2)
+        ledi.value(0)
+        
+        ledj.value(1)
+        utime.sleep(0.2)
+        ledj.value(0)
+        
+    def secuencia2():
+        print ("Amarillo presionado")
+    
+        leda.value(1)
+        utime.sleep(0.2)
+        leda.value(0)
+        
+        ledb.value(1)
+        utime.sleep(0.2)
+        ledb.value(0)
+        
+        ledc.value(1)
+        utime.sleep(0.2)
+        ledc.value(0)
+        
+        ledd.value(1)
+        utime.sleep(0.2)
+        ledd.value(0)
+        
+        lede.value(1)
+        utime.sleep(0.2)
+        lede.value(0)
+        
+        ledf.value(1)
+        utime.sleep(0.2)
+        ledf.value(0)
+        
+        ledg.value(1)
+        utime.sleep(0.2)
+        ledg.value(0)
+        
+        ledh.value(1)
+        utime.sleep(0.2)
+        ledh.value(0)
+        
+        ledi.value(1)
+        utime.sleep(0.2)
+        ledi.value(0)
+        
+        ledj.value(1)
+        utime.sleep(0.2)
+        ledj.value(0)
+       
+        ledi.value(1)
+        utime.sleep(0.2)
+        ledi.value(0)
+        
+        ledh.value(1)
+        utime.sleep(0.2)
+        ledh.value(0)
+        
+        ledg.value(1)
+        utime.sleep(0.2)
+        ledg.value(0)
+        
+        ledf.value(1)
+        utime.sleep(0.2)
+        ledf.value(0)
+        
+        lede.value(1)
+        utime.sleep(0.2)
+        lede.value(0)
+        
+        ledd.value(1)
+        utime.sleep(0.2)
+        ledd.value(0)
+        
+        ledc.value(1)
+        utime.sleep(0.2)
+        ledc.value(0)
+        
+        ledb.value(1)
+        utime.sleep(0.2)
+        ledb.value(0)
+        
+        leda.value(1)
+        utime.sleep(0.2)
+        leda.value(0)
+        
+    def secuencia3():
+        
+        print ("Azul presionado")
+        
+        lede.value(1) , ledf.value(1)
+        utime.sleep(0.2)
+        lede.value(0) , ledf.value(0)
+
+        ledd.value(1) , ledg.value(1)
+        utime.sleep(0.2)
+        ledd.value(0) , ledg.value(0)
+        
+
+        ledc.value(1) , ledh.value(1)
+        utime.sleep(0.2)
+        ledc.value(0) , ledh.value(0)
+        
+        ledb.value(1) , ledi.value(1)
+        utime.sleep(0.2)
+        ledb.value(0) , ledi.value(0)
+
+        leda.value(1) , ledj.value(1)
+        utime.sleep(0.2)
+        leda.value(0) , ledj.value(0)
+
+        ledb.value(1) , ledi.value(1)
+        utime.sleep(0.2)
+        ledb.value(0) , ledi.value(0)
+
+        ledc.value(1) , ledh.value(1)
+        utime.sleep(0.2)
+        ledc.value(0) , ledh.value(0)
+
+        ledd.value(1) , ledg.value(1)
+        utime.sleep(0.2)
+        ledd.value(0) , ledg.value(0)
+
+        lede.value(1) , ledf.value(1)
+        utime.sleep(0.2)
+        lede.value(0) , ledf.value(0)
+        
+    def secuencia4():
+        
+        print ("verde presionado")       
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        
+    def secuencia5():
+        print ("Rojo y Amarillo presionado")
+        print_led(1,1,0,0,0,0,0,0,0,0)
+        print_led(1,0,1,0,0,0,0,0,0,0)
+        print_led(1,0,0,1,0,0,0,0,0,0)
+        print_led(1,0,0,0,1,0,0,0,0,0)
+        print_led(1,0,0,0,0,1,0,0,0,0)
+        print_led(1,0,0,0,0,0,1,0,0,0)
+        print_led(1,0,0,0,0,0,0,1,0,0)
+        print_led(1,0,0,0,0,0,0,0,1,0)
+        print_led(1,0,0,0,0,0,0,0,0,1)
+        print_led(0,0,0,0,0,0,0,0,1,1)
+        print_led(0,0,0,0,0,0,0,1,0,1)
+        print_led(0,0,0,0,0,0,1,0,0,1)
+        print_led(0,0,0,0,0,1,0,0,0,1)
+        print_led(0,0,0,0,1,0,0,0,0,1)
+        print_led(0,0,0,1,0,0,0,0,0,1)
+        print_led(0,0,1,0,0,0,0,0,0,1)
+        print_led(0,1,0,0,0,0,0,0,0,1)
+        print_led(1,0,0,0,0,0,0,0,0,1)
+        
+    def secuencia6():
+        print ("Rojo y Azul presionado")
+        
+        print_led(1,1,1,0,0,0,0,0,0,0)
+        print_led(1,1,1,1,0,0,0,0,0,0)
+        print_led(1,0,1,1,1,0,0,0,0,0)
+        print_led(1,0,0,1,1,1,0,0,0,0)
+        print_led(1,0,0,0,1,1,1,0,0,0)
+        print_led(1,0,0,0,0,1,1,1,0,0)
+        print_led(1,0,0,0,0,0,1,1,1,0)
+        print_led(1,0,0,0,0,0,0,1,1,1)
+        print_led(1,0,0,0,0,0,0,0,1,1)
+        print_led(1,0,0,0,0,0,0,0,0,1)
+        print_led(0,0,0,0,0,0,0,0,1,1)
+        print_led(0,0,0,0,0,0,0,1,1,1)
+        print_led(0,0,0,0,0,0,1,1,1,1)
+        print_led(0,0,0,0,0,1,1,1,0,1)
+        print_led(0,0,0,0,1,1,1,0,0,1)
+        print_led(0,0,0,1,1,1,0,0,0,1)
+        print_led(0,0,1,1,1,0,0,0,0,1)
+        print_led(0,1,1,1,0,0,0,0,0,1)
+        print_led(1,1,1,0,0,0,0,0,0,1)
+        print_led(1,1,0,0,0,0,0,0,0,1)
+        print_led(1,0,0,0,0,0,0,0,0,1)
+    def secuencia182():
+        print("todos ")
+        print_led(1,1,0,0,0,0,0,0,0,0)
+        print_led(1,0,1,0,0,0,0,0,0,0)
+        print_led(1,0,0,1,0,0,0,0,0,0)
+        print_led(1,0,0,0,1,0,0,0,0,0)
+        print_led(1,0,0,0,0,1,0,0,0,0)
+        print_led(1,0,0,0,0,0,1,0,0,0)
+        print_led(1,0,0,0,0,0,0,1,0,0)
+        print_led(1,0,0,0,0,0,0,0,1,0)
+        print_led(1,0,0,0,0,0,0,0,0,1)
+        print_led(0,0,0,0,0,0,0,0,1,1)
+        print_led(0,0,0,0,0,0,0,1,0,1)
+        print_led(0,0,0,0,0,0,1,0,0,1)
+        print_led(0,0,0,0,0,1,0,0,0,1)
+        print_led(0,0,0,0,1,0,0,0,0,1)
+        print_led(0,0,0,1,0,0,0,0,0,1)
+        print_led(0,0,1,0,0,0,0,0,0,1)
+        print_led(0,1,0,0,0,0,0,0,0,1)
+        print_led(1,0,0,0,0,0,0,0,0,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+    
+    
+    if (boton3.value()==0 and boton1.value()==1 and boton2.value()==1 and boton4.value()==1):
+        secuencia1()
+        
+    if (boton4.value()==0 and boton1.value()==1 and boton2.value()==1 and boton3.value()==1):
+        secuencia2()
+        
+    if (boton2.value()==0 and boton1.value()==1 and boton3.value()==1 and boton4.value()==1):
+        secuencia3()
+        
+    if (boton1.value()==0 and boton2.value()==1 and boton3.value()==1 and boton4.value()==1):
+        secuencia4()
+
+    if (boton3.value()==0 and boton4.value()==0 and boton2.value()==1 and boton1.value()==1):
+        secuencia5()
+        
+    if (boton3.value()==0 and boton2.value()==0 and boton1.value()==1 and boton4.value()==1):
+        secuencia6()
+        
+    if (boton3.value()==0 and boton4.value()==0 and boton2.value()==0 and boton1.value()==0):
+        secuencia182()
+    
+    else:
+        print("nada oprimido")
