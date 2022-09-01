@@ -630,8 +630,5 @@ while (True):
         secuencia15()
         
     
-    #if (boton3.value()==0 and boton4.value()==0 and boton2.value()==0 and boton1.value()==0):
-     #   secuencia182()
-    
     else:
         print("nada oprimido")
