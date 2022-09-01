@@ -6,6 +6,9 @@ boton1 = Pin(25,Pin.IN)
 boton2 = Pin(26,Pin.IN)
 boton3 = Pin(27,Pin.IN)
 boton4 = Pin(13,Pin.IN)
+botonsubir = Pin(14,Pin.IN, Pin.PULL_DOWN)
+botonbajar = Pin(12,Pin.IN, Pin.PULL_UP)
+velocidad = 0.1
 leda=Pin(15,Pin.OUT)
 ledb=Pin(2,Pin.OUT)
 ledc=Pin(4,Pin.OUT)
@@ -33,9 +36,8 @@ def print_led(a,b,c,d,e,f,g,h,i,j):
     ledh.value(h)
     ledi.value(i)
     ledj.value(j)
-    utime.sleep(0.1)
+    velocidad
     
-
     
 i = 0
 for i in range (2):
@@ -65,10 +67,28 @@ for i in range (2):
         print_led(0,0,0,0,1,1,0,0,0,0)
         print_led(0,0,0,0,0,0,0,0,0,0)
         
-funcion = 0
-while (True):
+def rapido():
+    masrapido = velocidad + paso
+    return(masrapido)
+
+def lento():
+    maslento = velocidad - paso
+    
+    if maslento <= 0:
+        maslento = 20
+    return(maslento)
+
+while (True):   
     utime.sleep(0.2)
-     
+    
+    if botonsubir.value()==1 and botobajar()==0:
+        velocidad = rapido(velocidad)
+        
+        
+    if botonsubir.value()==0 and botonbajar.value()==0:
+        velocidad =lento(velocidad)
+        
+        
     def secuencia1():
         
         print ("Rojo presionado")
@@ -77,12 +97,12 @@ while (True):
             for i in ledt:
               for j in range (1):
                   i.value(not i.value())
-                  utime.sleep(0.15)
+                  velocidad
         def izquierda():
             for i in reversed(ledt):
               for j in range (1):
                   i.value(not i.value())
-                  utime.sleep(0.15)
+                  velocidad
         for funcion in range (2):
             derecha()
             izquierda()
@@ -94,16 +114,16 @@ while (True):
         def derecha():
             for elemento in todos:
                 elemento.value(1)
-                utime.sleep_ms(50)
+                velocidad
                 elemento.value(0)
-                utime.sleep(0.05)
+                velocidad
         
         def izquierda():
             for elemento in reversed(todos):
                 elemento.value(1)
-                utime.sleep(0.05)
+                velocidad
                 elemento.value(0)
-                utime.sleep(0.05)
+                velocidad
                 
         for funcion in range(2):
             derecha()
@@ -114,40 +134,40 @@ while (True):
         print ("Azul presionado")
         
         lede.value(1) , ledf.value(1)
-        utime.sleep(0.2)
+        velocidad
         lede.value(0) , ledf.value(0)
 
         ledd.value(1) , ledg.value(1)
-        utime.sleep(0.2)
+        velocidad
         ledd.value(0) , ledg.value(0)
         
 
         ledc.value(1) , ledh.value(1)
-        utime.sleep(0.2)
+        velocidad
         ledc.value(0) , ledh.value(0)
         
         ledb.value(1) , ledi.value(1)
-        utime.sleep(0.2)
+        velocidad
         ledb.value(0) , ledi.value(0)
 
         leda.value(1) , ledj.value(1)
-        utime.sleep(0.2)
+        velocidad
         leda.value(0) , ledj.value(0)
 
         ledb.value(1) , ledi.value(1)
-        utime.sleep(0.2)
+        velocidad
         ledb.value(0) , ledi.value(0)
 
         ledc.value(1) , ledh.value(1)
-        utime.sleep(0.2)
+        velocidad
         ledc.value(0) , ledh.value(0)
 
         ledd.value(1) , ledg.value(1)
-        utime.sleep(0.2)
+        velocidad
         ledd.value(0) , ledg.value(0)
 
         lede.value(1) , ledf.value(1)
-        utime.sleep(0.2)
+        velocidad
         lede.value(0) , ledf.value(0)
         
     def secuencia4():
@@ -245,37 +265,37 @@ while (True):
         print ("Amarillo y Azul presionado")
    
         ledd.value(1) , lede.value(1) , ledf.value(1) , ledg.value(1)
-        utime.sleep(0.15)
+        velocidad
         ledd.value(0) , lede.value(0) , ledf.value(0) , ledg.value(0)
 
-        utime.sleep(0.15)
+        velocidad
 
         ledd.value(1) , lede.value(1) , ledf.value(1) , ledg.value(1)
-        utime.sleep(0.15)
+        velocidad
         ledd.value(0) , lede.value(0) , ledf.value(0) , ledg.value(0)
 
-        utime.sleep(0.15)
+        velocidad
 
         ledd.value(1) , lede.value(1) , ledf.value(1) , ledg.value(1)
-        utime.sleep(0.15)
+        velocidad
         ledd.value(0) , lede.value(0) , ledf.value(0) , ledg.value(0)
 
-        utime.sleep(0.15)
+        velocidad
 
         leda.value(1) , ledb.value(1) , ledc.value(1) , ledh.value(1), ledi.value(1) , ledj.value(1)
-        utime.sleep(0.15)
+        velocidad
         leda.value(0) , ledb.value(0) , ledc.value(0) , ledh.value(0), ledi.value(0) , ledj.value(0)
         
-        utime.sleep(0.15)
+        velocidad
 
         leda.value(1) , ledb.value(1) , ledc.value(1) , ledh.value(1), ledi.value(1) , ledj.value(1)
-        utime.sleep(0.15)
+        velocidad
         leda.value(0) , ledb.value(0) , ledc.value(0) , ledh.value(0), ledi.value(0) , ledj.value(0)
         
-        utime.sleep(0.15)
+        velocidad
         
         leda.value(1) , ledb.value(1) , ledc.value(1) , ledh.value(1), ledi.value(1) , ledj.value(1)
-        utime.sleep(0.15)
+        velocidad
         leda.value(0) , ledb.value(0) , ledc.value(0) , ledh.value(0), ledi.value(0) , ledj.value(0)
         
     def secuencia9():
@@ -494,13 +514,13 @@ while (True):
             for i in mitad:
               for j in range (1):
                   i.value(not i.value())
-                  utime.sleep(0.5)
+                  velocidad
                   
         def izquierda():
             for i in mitad2:
               for j in range (1):
                   i.value(not i.value())
-                  utime.sleep(0.5)
+                  velocidad
         for funcion in range (1):
             derecha()
         for function in range(1):
@@ -631,4 +651,4 @@ while (True):
         
     
     else:
-        print("nada oprimido")
+        print("nada oprimido") 
