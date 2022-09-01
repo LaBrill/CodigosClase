@@ -1,5 +1,7 @@
 from machine import Pin
 import utime
+
+
 boton1 = Pin(25,Pin.IN)
 boton2 = Pin(26,Pin.IN)
 boton3 = Pin(27,Pin.IN)
@@ -15,6 +17,11 @@ ledh=Pin(21,Pin.OUT)
 ledi=Pin(22,Pin.OUT)
 ledj=Pin(23,Pin.OUT)
 
+todos = [leda,ledb,ledc,ledd,lede,ledf,ledg,ledh,ledi,ledj]
+ledt=[leda,ledb,ledc,ledd,lede,ledf,ledg,ledh,ledi,ledj]
+mitad=[leda,ledc,lede,ledg,ledi]
+mitad2=[ledb,ledd,ledf,ledh,ledj]
+
 def print_led(a,b,c,d,e,f,g,h,i,j):
     leda.value(a)
     ledb.value(b)
@@ -27,6 +34,8 @@ def print_led(a,b,c,d,e,f,g,h,i,j):
     ledi.value(i)
     ledj.value(j)
     utime.sleep(0.1)
+    
+
     
 i = 0
 for i in range (2):
@@ -54,6 +63,9 @@ for i in range (2):
         print_led(0,0,1,1,1,1,1,1,0,0)
         print_led(0,0,0,1,1,1,1,0,0,0)
         print_led(0,0,0,0,1,1,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        
+funcion = 0
 while (True):
     utime.sleep(0.2)
      
@@ -61,124 +73,41 @@ while (True):
         
         print ("Rojo presionado")
         
-        leda.value(1)
-        utime.sleep(0.2)
-        leda.value(0)
-        
-        ledb.value(1)
-        utime.sleep(0.2)
-        ledb.value(0)
-        
-        ledc.value(1)
-        utime.sleep(0.2)
-        ledc.value(0)
-        
-        ledd.value(1)
-        utime.sleep(0.2)
-        ledd.value(0)
-        
-        lede.value(1)
-        utime.sleep(0.2)
-        lede.value(0)
-        
-        ledf.value(1)
-        utime.sleep(0.2)
-        ledf.value(0)
-        
-        ledg.value(1)
-        utime.sleep(0.2)
-        ledg.value(0)
-        
-        ledh.value(1)
-        utime.sleep(0.2)
-        ledh.value(0)
-        
-        ledi.value(1)
-        utime.sleep(0.2)
-        ledi.value(0)
-        
-        ledj.value(1)
-        utime.sleep(0.2)
-        ledj.value(0)
+        def derecha():
+            for i in ledt:
+              for j in range (1):
+                  i.value(not i.value())
+                  utime.sleep(0.15)
+        def izquierda():
+            for i in reversed(ledt):
+              for j in range (1):
+                  i.value(not i.value())
+                  utime.sleep(0.15)
+        for funcion in range (2):
+            derecha()
+            izquierda()
+            izquierda()
+            derecha()
         
     def secuencia2():
         print ("Amarillo presionado")
-    
-        leda.value(1)
-        utime.sleep(0.2)
-        leda.value(0)
+        def derecha():
+            for elemento in todos:
+                elemento.value(1)
+                utime.sleep_ms(50)
+                elemento.value(0)
+                utime.sleep(0.05)
         
-        ledb.value(1)
-        utime.sleep(0.2)
-        ledb.value(0)
-        
-        ledc.value(1)
-        utime.sleep(0.2)
-        ledc.value(0)
-        
-        ledd.value(1)
-        utime.sleep(0.2)
-        ledd.value(0)
-        
-        lede.value(1)
-        utime.sleep(0.2)
-        lede.value(0)
-        
-        ledf.value(1)
-        utime.sleep(0.2)
-        ledf.value(0)
-        
-        ledg.value(1)
-        utime.sleep(0.2)
-        ledg.value(0)
-        
-        ledh.value(1)
-        utime.sleep(0.2)
-        ledh.value(0)
-        
-        ledi.value(1)
-        utime.sleep(0.2)
-        ledi.value(0)
-        
-        ledj.value(1)
-        utime.sleep(0.2)
-        ledj.value(0)
-       
-        ledi.value(1)
-        utime.sleep(0.2)
-        ledi.value(0)
-        
-        ledh.value(1)
-        utime.sleep(0.2)
-        ledh.value(0)
-        
-        ledg.value(1)
-        utime.sleep(0.2)
-        ledg.value(0)
-        
-        ledf.value(1)
-        utime.sleep(0.2)
-        ledf.value(0)
-        
-        lede.value(1)
-        utime.sleep(0.2)
-        lede.value(0)
-        
-        ledd.value(1)
-        utime.sleep(0.2)
-        ledd.value(0)
-        
-        ledc.value(1)
-        utime.sleep(0.2)
-        ledc.value(0)
-        
-        ledb.value(1)
-        utime.sleep(0.2)
-        ledb.value(0)
-        
-        leda.value(1)
-        utime.sleep(0.2)
-        leda.value(0)
+        def izquierda():
+            for elemento in reversed(todos):
+                elemento.value(1)
+                utime.sleep(0.05)
+                elemento.value(0)
+                utime.sleep(0.05)
+                
+        for funcion in range(2):
+            derecha()
+            izquierda()
         
     def secuencia3():
         
@@ -503,27 +432,157 @@ while (True):
         print_led(1,0,0,0,0,0,0,0,0,1)
         print_led(0,0,0,0,0,0,0,0,0,0)
         
-    def secuencia182():
-        print("todos ")
-        print_led(1,1,0,0,0,0,0,0,0,0)
-        print_led(1,0,1,0,0,0,0,0,0,0)
-        print_led(1,0,0,1,0,0,0,0,0,0)
-        print_led(1,0,0,0,1,0,0,0,0,0)
-        print_led(1,0,0,0,0,1,0,0,0,0)
-        print_led(1,0,0,0,0,0,1,0,0,0)
-        print_led(1,0,0,0,0,0,0,1,0,0)
-        print_led(1,0,0,0,0,0,0,0,1,0)
-        print_led(1,0,0,0,0,0,0,0,0,1)
-        print_led(0,0,0,0,0,0,0,0,1,1)
-        print_led(0,0,0,0,0,0,0,1,0,1)
-        print_led(0,0,0,0,0,0,1,0,0,1)
-        print_led(0,0,0,0,0,1,0,0,0,1)
-        print_led(0,0,0,0,1,0,0,0,0,1)
-        print_led(0,0,0,1,0,0,0,0,0,1)
-        print_led(0,0,1,0,0,0,0,0,0,1)
-        print_led(0,1,0,0,0,0,0,0,0,1)
+    def secuencia12():
+        print ("rojo amarillo y verde presionados")
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,1,1,1,0,0,0,0,0)
+        print_led(0,0,0,0,0,1,1,1,1,1)
+        print_led(1,1,1,1,1,0,0,0,0,0)
+        print_led(0,0,0,0,0,1,1,1,1,1)
+        print_led(1,1,1,1,1,0,0,0,0,0)
+        print_led(0,0,0,0,0,1,1,1,1,1)
+        print_led(1,1,1,1,1,0,0,0,0,0)
+        print_led(0,0,0,0,0,1,1,1,1,1)
+        print_led(1,1,1,1,1,0,0,0,0,0)
+        print_led(0,0,0,0,0,1,1,1,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,1,1,1,0,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,1,1,1,0,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,0,0,1,1,1,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,0,0,1,1,1,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,1,1,1,0,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,1,1,1,0,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,0,0,1,1,1,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,0,0,1,1,1,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,1,1,1,0,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,1,1,1,0,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,0,0,1,1,1,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,0,0,1,1,1,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,1,1,1,0,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,1,1,1,0,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,0,0,1,1,1,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,0,0,1,1,1,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,1,1,1,0,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,1,1,1,0,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,0,0,1,1,1,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,0,0,1,1,1,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        
+    def secuencia13():
+        print("rojo azul y verde ")
+        def derecha():
+            for i in mitad:
+              for j in range (1):
+                  i.value(not i.value())
+                  utime.sleep(0.5)
+                  
+        def izquierda():
+            for i in mitad2:
+              for j in range (1):
+                  i.value(not i.value())
+                  utime.sleep(0.5)
+        for funcion in range (1):
+            derecha()
+        for function in range(1):
+            izquierda()
+    
+    def secuencia14():
+        print("amarillo azul y verde")
         print_led(1,0,0,0,0,0,0,0,0,1)
         print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,0,0,0,0,0,0,0,0,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,0,0,0,0,0,0,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,0,0,0,0,0,0,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,1,1,0,0,0,0,1,1,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,1,1,0,0,0,0,1,1,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,1,1,0,0,1,1,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,1,1,0,0,1,1,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,1,1,1,1,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,1,1,1,1,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,0,1,1,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,0,1,1,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,1,1,1,1,1,1,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,1,1,1,1,1,1,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,0,1,1,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,0,1,1,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,1,1,1,1,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,1,1,1,1,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,1,1,0,0,1,1,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,1,1,0,0,1,1,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,1,1,0,0,0,0,1,1,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(0,1,1,0,0,0,0,1,1,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,0,0,0,0,0,0,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,1,0,0,0,0,0,0,1,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,0,0,0,0,0,0,0,0,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        print_led(1,0,0,0,0,0,0,0,0,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        
+    def secuencia15():
+        print("todos ")
+        print_led(1,0,0,0,0,0,0,0,0,1)
+        print_led(1,1,0,0,0,0,0,0,1,1)
+        print_led(1,1,1,0,0,0,0,1,1,1)
+        print_led(0,1,1,1,0,0,1,1,1,0)
+        print_led(0,0,1,1,1,1,1,1,0,0)
+        print_led(0,0,0,1,1,1,1,0,0,0)
+        print_led(0,0,0,0,1,1,0,0,0,0)
+        print_led(0,0,0,1,1,1,1,0,0,0)
+        print_led(0,1,1,1,1,1,1,1,1,0)
+        print_led(1,1,1,1,0,0,1,1,1,1)
+        print_led(1,1,0,0,0,0,0,0,1,1)
+        print_led(1,0,0,0,0,0,0,0,0,1)
+        print_led(1,1,0,0,0,0,0,0,1,1)
+        print_led(1,1,1,1,1,1,1,1,1,1)
+        print_led(1,1,0,0,0,0,0,0,1,1)
+        print_led(1,1,0,0,1,1,0,0,1,1)
+        print_led(1,0,0,0,0,0,0,0,0,1)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+        
+
     
     if (boton3.value()==0 and boton1.value()==1 and boton2.value()==1 and boton4.value()==1):
         secuencia1()
@@ -555,11 +614,24 @@ while (True):
     if (boton2.value()==0 and boton1.value()==0 and boton3.value()==1 and boton4.value()==1):
         secuencia10()
         
-    if (boton3.value()==0 and boton4.value()==0 and boton2.value()==0 and boton1.value()==0):
+    if (boton3.value()==0 and boton4.value()==0 and boton2.value()==0 and boton1.value()==1):
         secuencia11()
     
+    if (boton3.value()==0 and boton4.value()==0 and boton2.value()==1 and boton1.value()==0):
+        secuencia12()
+        
+    if (boton3.value()==0 and boton4.value()==1 and boton2.value()==0 and boton1.value()==0):
+        secuencia13()
+        
+    if (boton3.value()==1 and boton4.value()==0 and boton2.value()==0 and boton1.value()==0):
+        secuencia14()
+        
     if (boton3.value()==0 and boton4.value()==0 and boton2.value()==0 and boton1.value()==0):
-        secuencia182()
+        secuencia15()
+        
+    
+    #if (boton3.value()==0 and boton4.value()==0 and boton2.value()==0 and boton1.value()==0):
+     #   secuencia182()
     
     else:
         print("nada oprimido")
