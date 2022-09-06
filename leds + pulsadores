@@ -648,12 +648,12 @@ while (True):
         
     if botonsubir.value()==1 and botonbajar()==0:
         velocidad = rapido(velocidad)
-        print("subir presionado")
+        print("bajar presionado")
         
         
-    if botonsubir.value()==0 and botonbajar.value()==0:
+    if botonsubir.value()==0 and botonbajar.value()==1:
         velocidad =lento(velocidad)
-        print ("bajar presionado")
+        print ("subir presionado")
     
     else:
         print("nada oprimido") 
