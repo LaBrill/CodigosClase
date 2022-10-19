@@ -77,6 +77,20 @@ def on_rx():
         uart.write("el valor no aplica")
         print("el valor no aplica")
 
+    if dato != 0:
+
+      m1.duty(0)
+      m2.duty(0)
+        
+      for i in range (400,1023,10):
+        m1.duty(i)
+        utime.sleep(0.2)
+
+      for i in range (1023,400,-10):
+        m1.duty(i)
+        utime.sleep(0.2)
+
+
    
 
 
@@ -235,17 +249,6 @@ def posicioncanica():
 while True:
 
   on_rx()
-  m1.duty(0)
-  m2.duty(0)
-    
-  for i in range (400,1023,10):
-    m1.duty(i)
-    utime.sleep(0.2)
-
-  for i in range (1023,400,-10):
-    m1.duty(i)
-    utime.sleep(0.2)
-    
 
 
   print("Efecto hall: " )
